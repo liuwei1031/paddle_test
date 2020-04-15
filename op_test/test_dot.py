@@ -8,7 +8,6 @@ import unittest
 
 
 class CompareDotOp(unittest.TestCase):
-
     def test_api_accuracy(self):
         for i in range(10000):
             n = np.random.randint(100, 1000, size=1)[0]
@@ -53,10 +52,8 @@ class CompareDotOp(unittest.TestCase):
                 paddle_res = paddle.dot(paddle_x, paddle_y).numpy()
                 total_paddle_time += (datetime.now() - x).total_seconds()
 
-         
         print(total_paddle_time, total_torch_time)   
     
-
 
 if __name__ == "__main__":
     unittest.main()
